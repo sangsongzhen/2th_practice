@@ -6,36 +6,39 @@ using namespace std;
 
 int main()
 {
-	//int num = 0;
-	int n = 1;
-	//cout << "请输入菱形的行数：";
-	//cin >> num;
+	int num = 0; //定义输入值行数
+	int n = 1;  //定义第一行
+	cout << "请输入菱形的行数：";
+	cin >> num;
 
-	for (int i = 5; i > 0; i--)
+	int i = num / 2 + 1;
+	for (; i > 0; i--)
 	{
 		for (int j = i; j > 1; j--)
 		{
-			cout << " ";
+			cout << " ";  //缩进
 		}
-		for (int k = 1; k < 2 * n; k++)
+		for (int k = 1; k < 2 * n; k++) //输出个数
 		{
-			cout << 1;
+			cout << "*";  //菱形因子
 		}
-		cout << endl;
-		n++;
+		cout << endl;  //单行输出完成
+		n++;  //行数自加
 	}
-	for (int i = 1; i < 5; i++)
+	 
+	n -= 1;
+	for (int i = 1; i < (num / 2 + 1); i++)
 	{
 		for (int j = 0; j < i; j++)
 		{
-			cout << " ";
+			cout << " ";  //缩进
 		}
-		for (int k = n; k >= 0; k--)
+		for (int k = 1; k < 2 * n - 2; k++)
 		{
-			cout << 1; 
+			cout << "*";
 		}
 		cout << endl;
-		n-=2;
+		n--;
 	}
 	
 	system("pause");
