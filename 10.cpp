@@ -26,14 +26,14 @@ int main()
 		n++;  //行数自加
 	}
 	 
-	n -= 1;
+	n -= 2;
 	for (int i = 1; i < (num / 2 + 1); i++)
 	{
 		for (int j = 0; j < i; j++)
 		{
 			cout << " ";  //缩进
 		}
-		for (int k = 1; k < 2 * n - 2; k++)
+		for (int k = 1; k < 2 * n; k++)
 		{
 			cout << "*";
 		}
