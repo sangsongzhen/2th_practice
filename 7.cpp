@@ -4,9 +4,9 @@
 
 using namespace std;
 
-int main7()
+int main()
 {
-	for (int i = 0; i < 1000; i++)
+	for (int i = 1; i < 1000; i++)
 	{
 		int num = 0;
 		int j = i / 2;
@@ -21,8 +21,23 @@ int main7()
 
 		if (num == i) //判断是否是完数
 		{
-			cout << num << "---->" << j << endl;//输出所有可行的j值
+			cout << num << "---->";//输出所有可行的j值
+
+			//接下来输出num所有的因子就行了
+			for (int k = 1; k < num; k++)
+			{
+				if ((num % k) == 0)
+				{
+					cout << k;
+					if (k < (num / 2)) //要让最后一项的后面没有逗号
+					{
+						cout << ",";
+					}
+				}
+			}
+			cout << endl;  //没输出一个完数，换一次行
 		}
+
 	}
 
 	system("pause");
